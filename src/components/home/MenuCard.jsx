@@ -10,7 +10,7 @@ const MenuCard = ({ item }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.4 }}
-      className="bg-cream/20 rounded-xl overflow-hidden border border-mocha/10 hover:border-caramel/30 hover:bg-cream/40 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col group h-full"
+      className="bg-cream/20 rounded-xl overflow-hidden border-2 border-espresso/15 hover:border-espresso/35 hover:bg-cream/40 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(19,62,43,0.12)] hover:shadow-[6px_6px_0px_0px_rgba(19,62,43,0.25)] flex flex-col group h-full"
     >
       {/* Image Container with Zoom effect */}
       <div className="relative h-56 w-full overflow-hidden bg-mocha/20">
@@ -18,7 +18,7 @@ const MenuCard = ({ item }) => {
           src={item.image} 
           alt={item.name} 
           loading="lazy"
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 vintage-photo"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-espresso/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         

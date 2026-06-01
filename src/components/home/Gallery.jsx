@@ -25,14 +25,14 @@ const Gallery = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
               onClick={() => setSelectedImage(item)}
-              className="group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md hover:shadow-xl border border-mocha/10"
+              className="group relative h-72 rounded-xl overflow-hidden cursor-pointer border-2 border-espresso/20 shadow-[4px_4px_0px_0px_rgba(19,62,43,0.12)] hover:shadow-[6px_6px_0px_0px_rgba(19,62,43,0.25)] transition-all duration-300"
             >
               {/* Photo */}
               <img 
                 src={item.image} 
                 alt={item.title} 
                 loading="lazy"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 vintage-photo"
               />
               
               {/* Dark Hover Overlay */}

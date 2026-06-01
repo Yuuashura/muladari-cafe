@@ -70,11 +70,11 @@ const Story = () => {
             className="relative"
           >
             {/* Image stack effect */}
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-4 border-cream">
+            <div className="relative z-10 rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(19,62,43,0.18)] border-[12px] border-cream">
               <img 
                 src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=800&auto=format&fit=crop" 
                 alt="Proses Brewing Kopi Muladari" 
-                className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700 vintage-photo"
               />
             </div>
             
@@ -95,7 +95,7 @@ const Story = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-cream/40 p-6 rounded-xl border border-mocha/10 hover:border-caramel/40 hover:bg-cream transition-all duration-300 group shadow-sm hover:shadow-md text-center"
+                className="bg-cream/40 p-6 rounded-xl border-2 border-espresso/15 hover:border-espresso/35 hover:bg-cream transition-all duration-300 group shadow-[4px_4px_0px_0px_rgba(19,62,43,0.12)] hover:shadow-[6px_6px_0px_0px_rgba(19,62,43,0.25)] text-center"
               >
                 <div className="w-12 h-12 bg-mocha text-cream rounded-lg flex items-center justify-center mx-auto mb-5 group-hover:bg-caramel transition-colors duration-300">
                   <Icon className="w-6 h-6" />

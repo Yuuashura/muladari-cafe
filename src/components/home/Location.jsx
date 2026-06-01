@@ -4,10 +4,10 @@ import SectionTitle from '../common/SectionTitle';
 
 const outlets = [
   {
-    name: 'Outlet Utama (Jl. Minang)',
-    address: 'Jl. Minang, depan Hotel Emerone, Batusangkar',
+    name: 'Outlet Utama (Muladari Kopi)',
+    address: 'GHXV+P8X, Baringin, Kec. Lima Kaum, Batusangkar, Sumatera Barat (Depan Emerone Hotel)',
     isPrimary: true,
-    mapsLink: 'https://maps.google.com/?q=Hotel+Emerone+Batusangkar'
+    mapsLink: 'https://maps.app.goo.gl/BTGMt4qYe9tDfzA39'
   },
   {
     name: 'Outlet Gedung Nasional',
@@ -63,10 +63,10 @@ const Location = () => {
                 {outlets.map((outlet, idx) => (
                   <div 
                     key={idx}
-                    className={`p-5 rounded-xl border transition-all duration-300 ${
+                    className={`p-5 rounded-xl border-2 transition-all duration-300 ${
                       outlet.isPrimary 
-                        ? 'bg-cream border-caramel/40 shadow-md' 
-                        : 'bg-cream/40 border-mocha/10 hover:border-caramel/20'
+                        ? 'bg-cream border-espresso/35 shadow-[4px_4px_0px_0px_rgba(19,62,43,0.15)]' 
+                        : 'bg-cream/40 border-espresso/15 shadow-[2px_2px_0px_0px_rgba(19,62,43,0.05)] hover:border-espresso/30 hover:shadow-[4px_4px_0px_0px_rgba(19,62,43,0.15)]'
                     }`}
                   >
                     <div className="flex items-start space-x-3">
@@ -99,7 +99,7 @@ const Location = () => {
               <button 
                 onClick={() => {
                   const waNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '628123456789';
-                  const waMessage = encodeURIComponent('Halo Muladari Coffee, saya mencari rute ke outlet utama Jl. Minang. Boleh dibantu petunjuk jalannya?');
+                  const waMessage = encodeURIComponent('Halo Muladari Coffee, saya mencari rute ke outlet utama Muladari Kopi. Boleh dibantu petunjuk jalannya?');
                   window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank');
                 }}
                 className="w-full px-6 py-4 bg-caramel hover:bg-gold text-espresso font-semibold rounded-lg shadow-md flex items-center justify-center space-x-2 transition-all duration-300"
@@ -116,11 +116,11 @@ const Location = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 h-[450px] lg:h-auto rounded-3xl overflow-hidden border-4 border-cream shadow-2xl bg-mocha/10"
+            className="lg:col-span-7 h-[450px] lg:h-auto rounded-3xl overflow-hidden border-2 border-espresso/20 shadow-[8px_8px_0px_0px_rgba(19,62,43,0.18)] bg-mocha/10"
           >
             <iframe 
               title="Peta Lokasi Muladari Coffee"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.697426868846!2d100.59368167448834!3d-0.4578148352601955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e2ab1765c92c575%3A0xe54e60cf0b62e49d!2sHotel%20Emerone%20Batusangkar!5e0!3m2!1sid!2sid!4v1717200000000!5m2!1sid!2sid"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6949244072853!2d100.59078917435646!3d-0.4506222352824379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd52d000c6fb251%3A0x54dcb6b31b312648!2sMuladari%20Kopi!5e0!3m2!1sid!2sid!4v1780302509040!5m2!1sid!2sid"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

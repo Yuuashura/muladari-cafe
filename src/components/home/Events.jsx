@@ -21,14 +21,14 @@ const Events = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="bg-cream rounded-2xl overflow-hidden border border-mocha/10 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row group"
+              className="bg-cream rounded-2xl overflow-hidden border-2 border-espresso/15 shadow-[4px_4px_0px_0px_rgba(19,62,43,0.12)] hover:shadow-[6px_6px_0px_0px_rgba(19,62,43,0.25)] transition-all duration-300 flex flex-col md:flex-row group"
             >
               {/* Promo Image */}
               <div className="md:w-2/5 h-48 md:h-auto relative bg-mocha/20 overflow-hidden shrink-0">
                 <img 
                   src={promo.image} 
                   alt={promo.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 vintage-photo"
                 />
                 <span className="absolute top-4 left-4 bg-caramel text-cream font-semibold text-xs px-3 py-1.5 rounded-full shadow-sm">
                   {promo.badge}
@@ -73,11 +73,11 @@ const Events = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-cream bg-espresso"
+          className="relative rounded-3xl overflow-hidden border-2 border-espresso/20 shadow-[8px_8px_0px_0px_rgba(19,62,43,0.18)] bg-espresso"
         >
           {/* Background image */}
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-30 hover:scale-105 transition-transform duration-1000"
+            className="absolute inset-0 bg-cover bg-center opacity-30 hover:scale-105 transition-transform duration-1000 vintage-photo"
             style={{ backgroundImage: `url(${districtMuladari.image})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-espresso via-espresso/90 to-transparent" />

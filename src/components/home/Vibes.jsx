@@ -19,11 +19,11 @@ const Vibes = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: idx * 0.15 }}
-              className="group relative h-[450px] w-full rounded-2xl overflow-hidden shadow-lg border border-mocha/10"
+              className="group relative h-[450px] w-full rounded-2xl overflow-hidden border-2 border-espresso/20 shadow-[4px_4px_0px_0px_rgba(19,62,43,0.12)] hover:shadow-[6px_6px_0px_0px_rgba(19,62,43,0.25)] transition-all duration-300"
             >
               {/* Background Image */}
               <div 
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 vintage-photo"
                 style={{ backgroundImage: `url(${vibe.image})` }}
               />
               {/* Dark Overlays */}

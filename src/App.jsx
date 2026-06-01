@@ -12,7 +12,10 @@ import FloatingWhatsapp from './components/common/FloatingWhatsapp';
 
 function App() {
   return (
-    <div className="min-h-screen bg-cream text-espresso overflow-x-hidden">
+    <div className="min-h-screen bg-cream text-espresso overflow-x-hidden relative">
+      {/* 90s Film Grain Overlay */}
+      <div className="vintage-grain" />
+
       {/* Navigation Header */}
       <Navbar />
 
