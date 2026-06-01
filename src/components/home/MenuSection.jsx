@@ -83,7 +83,7 @@ const MenuSection = () => {
                 exit={{ scale: 0.9, y: 30 }}
                 transition={{ type: 'spring', damping: 25 }}
                 onClick={(e) => e.stopPropagation()}
-                className="max-w-3xl w-full bg-espresso border-2 border-mocha/30 rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row cursor-default vintage-grain"
+                className="max-w-3xl w-full bg-espresso border-2 border-mocha/30 rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row cursor-default"
               >
                 {/* Image */}
                 <div className="md:w-1/2 h-[260px] md:h-[400px] bg-mocha/20 overflow-hidden relative">
