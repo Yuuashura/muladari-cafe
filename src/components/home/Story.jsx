@@ -72,8 +72,8 @@ const Story = () => {
             {/* Image stack effect */}
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(19,62,43,0.18)] border-[12px] border-cream">
               <img 
-                src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=800&auto=format&fit=crop" 
-                alt="Proses Brewing Kopi Muladari" 
+                src="/images/about.jpg" 
+                alt="Kedai Muladari Kopi" 
                 className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700 vintage-photo"
               />
             </div>
