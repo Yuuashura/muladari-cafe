@@ -124,7 +124,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation Drawer */}
       <div
-        className={`lg:hidden fixed inset-0 top-[60px] md:top-[68px] z-40 bg-espresso/98 transition-all duration-500 transform overflow-y-auto ${
+        className={`lg:hidden fixed inset-0 top-[60px] md:top-[68px] z-40 bg-espresso transition-all duration-500 transform overflow-y-auto ${
           isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >
