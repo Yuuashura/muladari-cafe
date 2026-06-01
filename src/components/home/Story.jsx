@@ -82,7 +82,7 @@ const Story = () => {
               <img 
                 src="/images/about.jpg" 
                 alt="Kedai Muladari Kopi" 
-                className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-700 vintage-photo"
+                className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700 vintage-photo"
               />
             </div>
             
