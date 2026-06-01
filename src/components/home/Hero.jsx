@@ -15,7 +15,7 @@ const Hero = () => {
           backgroundImage: `url('https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1600&auto=format&fit=crop')`,
         }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-espresso/80 via-espresso/95 to-espresso" />
+      <div className="absolute inset-0 bg-gradient-to-b from-forest/80 via-espresso/95 to-espresso" />
 
       {/* Decorative Floating Element */}
       <div className="absolute top-1/4 left-1/10 w-96 h-96 bg-gold/10 rounded-full filter blur-3xl" />

@@ -8,8 +8,10 @@ export default {
     extend: {
       colors: {
         cream: '#F5EFE0',
-        espresso: '#133E2B', // Brand Green (Forest Green)
-        mocha: '#2E4C3E',    // Secondary Soft Green
+        espresso: '#261B12',   // Vintage Dark Coffee Brown
+        mocha: '#4A3528',      // Vintage Medium Mocha Brown
+        forest: '#133E2B',     // Brand Green from logo
+        olive: '#2E4C3E',      // Brand Soft Green
         caramel: '#C4863A',
         gold: '#D4A853',
       },

@@ -44,7 +44,7 @@ const Contact = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 space-y-6"
           >
-            <div className="bg-espresso text-cream p-8 rounded-2xl border border-mocha space-y-6 shadow-xl">
+            <div className="bg-espresso text-cream p-8 rounded-2xl border-2 border-mocha/40 space-y-6 shadow-[6px_6px_0px_0px_rgba(19,62,43,0.18)]">
               <h3 className="font-playfair text-2xl font-bold text-gold">Hubungi Kami</h3>
               <p className="font-dmsans text-sm text-cream/70 leading-relaxed">
                 Ada pertanyaan, kritik, saran, atau ingin berkolaborasi? Tim kami siap menyambut cerita Anda kapan saja.
@@ -100,7 +100,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="lg:col-span-7 bg-cream p-8 md:p-10 rounded-2xl border border-mocha/10 shadow-lg"
+            className="lg:col-span-7 bg-cream p-8 md:p-10 rounded-2xl border-2 border-espresso/20 shadow-[6px_6px_0px_0px_rgba(19,62,43,0.18)]"
           >
             <h3 className="font-playfair text-2xl font-bold text-espresso mb-6">Kirim Pesan</h3>
             
