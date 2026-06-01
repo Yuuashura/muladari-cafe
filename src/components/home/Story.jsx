@@ -47,17 +47,25 @@ const Story = () => {
               "Berawal dari cerita menjadi sebuah cita-cita."
             </h3>
             
-            <p className="font-dmsans text-base md:text-lg text-espresso/80 leading-relaxed">
-              Muladari Coffee berdiri bukan sekadar sebagai penyedia asupan kafein harian Anda. Kami lahir dari kecintaan mendalam terhadap budaya kumpul, bercerita, dan berdiskusi masyarakat lokal Batusangkar.
+            <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
+              Muladari Kopi is a charming coffee shop situated in the heart of Baringin, Lima Kaum, Tanah Datar Regency, West Sumatra, offering a cozy retreat for coffee enthusiasts and casual visitors alike. This spot expertly blends a vintage aesthetic with warm hospitality, creating an inviting atmosphere that feels both nostalgic and fresh.
             </p>
             
-            <p className="font-dmsans text-base md:text-lg text-espresso/80 leading-relaxed">
-              Di setiap cangkir kopi yang kami sajikan, ada cerita perjuangan petani kopi lokal, dedikasi barista kami, serta mimpi-mimpi besar dari setiap pelanggan yang datang berdiskusi di meja-meja kami. Kami percaya bahwa kopi adalah jembatan yang menghubungkan setiap ide menjadi sebuah kenyataan.
+            <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
+              The highlight here is undoubtedly their coffee selection, with a particular nod to their signature hazelnut milk coffee. It strikes a perfect balance, rich in flavor without overpowering sweetness, satisfying both those who cherish robust coffee notes and those who prefer a smoother sip. Customers have praised how the coffee compares favorably with offerings from the more established coffee shops in nearby Batusangkar.
             </p>
 
-            <div className="pt-4">
-              <div className="border-l-4 border-caramel pl-4 italic text-mocha font-playfair text-lg">
-                "Kami hadir untuk menemani setiap proses kreatifmu, mendengarkan keluh kesahmu, dan menyambut setiap keberhasilanmu dengan secangkir kopi hangat."
+            <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
+              Muladari Kopi thrives on delivering not just great coffee but a complete experience. The ambiance is thoughtfully crafted, featuring aesthetically pleasing decor that evokes a vintage vibe, making it an excellent place for relaxing, socializing, or enjoying a quiet moment. Friendly and attentive service adds to the comfort, tailoring each visit to leave a lasting impression.
+            </p>
+
+            <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
+              The location in Tanah Datar provides a scenic backdrop, allowing patrons to enjoy views of the surrounding cityscape while sipping their drinks. This makes Muladari Kopi a perfect destination for friends, couples, or anyone looking to unwind.
+            </p>
+
+            <div className="pt-2">
+              <div className="border-l-4 border-caramel pl-4 italic text-mocha font-playfair text-base">
+                "For those visiting West Sumatra or locals seeking a delightful coffee break, Muladari Kopi stands out as a must-visit. Its combination of carefully crafted coffee, a welcoming atmosphere, and affordability invites repeat visits."
               </div>
             </div>
           </motion.div>
