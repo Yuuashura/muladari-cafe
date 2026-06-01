@@ -64,61 +64,63 @@ const Navbar = () => {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled || isMobileMenuOpen
-          ? 'bg-espresso/95 backdrop-blur-md shadow-lg border-b border-mocha py-3 text-cream'
-          : 'bg-transparent py-5 text-cream'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          {/* Logo / Brand Name */}
-          <div 
-            onClick={() => handleNavClick('home')}
-            className="flex items-center space-x-3 cursor-pointer group"
-          >
-            <img 
-              src="/images/muladari_logo.jpg" 
-              alt="Muladari Coffee Logo" 
-              className="w-10 h-10 rounded-full object-cover border border-gold/30 transition-transform duration-300 group-hover:scale-105" 
-            />
-            <span className="font-playfair text-xl md:text-2xl font-bold tracking-wider uppercase">
-              Muladari<span className={isScrolled || isMobileMenuOpen ? 'text-gold' : 'text-caramel'}> Coffee</span>
-            </span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => handleNavClick(link.id)}
-                className={`font-dmsans text-sm font-medium tracking-wide transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-current after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ${
-                  activeSection === link.id
-                    ? 'text-gold after:scale-x-100'
-                    : 'opacity-80 hover:opacity-100'
-                }`}
-              >
-                {link.label}
-              </button>
-            ))}
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`p-2 rounded-md focus:outline-none transition-colors duration-300 ${
-                isScrolled || isMobileMenuOpen ? 'hover:bg-mocha text-cream' : 'hover:bg-cream/10 text-cream'
-              }`}
-              aria-label="Toggle menu"
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+          isScrolled || isMobileMenuOpen
+            ? 'bg-espresso/95 backdrop-blur-md shadow-lg border-b border-mocha py-3 text-cream'
+            : 'bg-transparent py-5 text-cream'
+        }`}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            {/* Logo / Brand Name */}
+            <div 
+              onClick={() => handleNavClick('home')}
+              className="flex items-center space-x-3 cursor-pointer group"
             >
-              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+              <img 
+                src="/images/muladari_logo.jpg" 
+                alt="Muladari Coffee Logo" 
+                className="w-10 h-10 rounded-full object-cover border border-gold/30 transition-transform duration-300 group-hover:scale-105" 
+              />
+              <span className="font-playfair text-xl md:text-2xl font-bold tracking-wider uppercase">
+                Muladari<span className={isScrolled || isMobileMenuOpen ? 'text-gold' : 'text-caramel'}> Coffee</span>
+              </span>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-8">
+              {navLinks.map((link) => (
+                <button
+                  key={link.id}
+                  onClick={() => handleNavClick(link.id)}
+                  className={`font-dmsans text-sm font-medium tracking-wide transition-all duration-300 relative py-1 after:absolute after:bottom-0 after:left-0 after:right-0 after:h-[2px] after:bg-current after:origin-right after:scale-x-0 hover:after:origin-left hover:after:scale-x-100 after:transition-transform after:duration-300 ${
+                    activeSection === link.id
+                      ? 'text-gold after:scale-x-100'
+                      : 'opacity-80 hover:opacity-100'
+                  }`}
+                >
+                  {link.label}
+                </button>
+              ))}
+            </nav>
+
+            {/* Mobile Menu Button */}
+            <div className="lg:hidden">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className={`p-2 rounded-md focus:outline-none transition-colors duration-300 ${
+                  isScrolled || isMobileMenuOpen ? 'hover:bg-mocha text-cream' : 'hover:bg-cream/10 text-cream'
+                }`}
+                aria-label="Toggle menu"
+              >
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
 
       {/* Mobile Navigation Drawer */}
       <div
@@ -141,7 +143,7 @@ const Navbar = () => {
           ))}
         </nav>
       </div>
-    </header>
+    </>
   );
 };
 
