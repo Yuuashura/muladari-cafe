@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
-import { formatCurrency } from '../../utils/formatCurrency';
 
 const MenuCard = ({ item, onSelect }) => {
   return (

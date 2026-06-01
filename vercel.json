@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/muladari-coffee",
+      "permanent": true
+    },
+    {
+      "source": "/muladari-coffe",
+      "destination": "/muladari-coffee",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",

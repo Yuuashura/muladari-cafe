@@ -59,14 +59,17 @@ const MainLayout = () => {
 function App() {
   return (
     <Routes>
-      {/* Redirect root to /muladari-coffe */}
-      <Route path="/" element={<Navigate to="/muladari-coffe" replace />} />
+      {/* Redirect root to the canonical Muladari Coffee page */}
+      <Route path="/" element={<Navigate to="/muladari-coffee" replace />} />
+
+      {/* Keep the old misspelled URL working while pointing users to the canonical route */}
+      <Route path="/muladari-coffe" element={<Navigate to="/muladari-coffee" replace />} />
       
-      {/* Index route on /muladari-coffe */}
-      <Route path="/muladari-coffe" element={<MainLayout />} />
+      {/* Index route on /muladari-coffee */}
+      <Route path="/muladari-coffee" element={<MainLayout />} />
       
-      {/* Fallback to /muladari-coffe */}
-      <Route path="*" element={<Navigate to="/muladari-coffe" replace />} />
+      {/* Fallback to /muladari-coffee */}
+      <Route path="*" element={<Navigate to="/muladari-coffee" replace />} />
     </Routes>
   );
 }
