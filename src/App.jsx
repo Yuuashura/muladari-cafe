@@ -1,3 +1,4 @@
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import Hero from './components/home/Hero';
 import Story from './components/home/Story';
@@ -10,7 +11,7 @@ import Contact from './components/home/Contact';
 import Footer from './components/common/Footer';
 import FloatingWhatsapp from './components/common/FloatingWhatsapp';
 
-function App() {
+const MainLayout = () => {
   return (
     <div className="min-h-screen bg-cream text-espresso overflow-x-hidden relative">
       {/* 90s Film Grain Overlay */}
@@ -52,6 +53,21 @@ function App() {
       {/* Floating Action Trigger */}
       <FloatingWhatsapp />
     </div>
+  );
+};
+
+function App() {
+  return (
+    <Routes>
+      {/* Redirect root to /muladari-coffe */}
+      <Route path="/" element={<Navigate to="/muladari-coffe" replace />} />
+      
+      {/* Index route on /muladari-coffe */}
+      <Route path="/muladari-coffe" element={<MainLayout />} />
+      
+      {/* Fallback to /muladari-coffe */}
+      <Route path="*" element={<Navigate to="/muladari-coffe" replace />} />
+    </Routes>
   );
 }
 
