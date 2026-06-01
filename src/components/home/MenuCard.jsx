@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import { formatCurrency } from '../../utils/formatCurrency';
 
-const MenuCard = ({ item }) => {
+const MenuCard = ({ item, onSelect }) => {
   return (
     <motion.div
       layout
@@ -10,7 +10,8 @@ const MenuCard = ({ item }) => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9 }}
       transition={{ duration: 0.4 }}
-      className="bg-cream/20 rounded-xl overflow-hidden border-2 border-espresso/15 hover:border-espresso/35 hover:bg-cream/40 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(19,62,43,0.12)] hover:shadow-[6px_6px_0px_0px_rgba(19,62,43,0.25)] flex flex-col group h-full"
+      onClick={onSelect}
+      className="bg-cream/20 rounded-xl overflow-hidden border-2 border-espresso/15 hover:border-espresso/35 hover:bg-cream/40 transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(19,62,43,0.12)] hover:shadow-[6px_6px_0px_0px_rgba(19,62,43,0.25)] flex flex-col group h-full cursor-pointer"
     >
       {/* Image Container with Zoom effect */}
       <div className="relative h-56 w-full overflow-hidden bg-mocha/20">
@@ -37,9 +38,6 @@ const MenuCard = ({ item }) => {
           <h3 className="font-playfair text-xl font-bold text-espresso group-hover:text-caramel transition-colors duration-300">
             {item.name}
           </h3>
-          <span className="font-dmsans font-bold text-base text-caramel whitespace-nowrap pt-0.5">
-            {formatCurrency(item.price)}
-          </span>
         </div>
         
         <p className="font-dmsans text-sm text-espresso/70 leading-relaxed flex-grow">
@@ -52,15 +50,13 @@ const MenuCard = ({ item }) => {
             {item.category === 'hot' ? 'Kopi Panas' : item.category === 'cold' ? 'Kopi Dingin' : item.category === 'non-kopi' ? 'Non-Kopi' : 'Makanan'}
           </span>
           <button 
-            onClick={() => {
-              // Direct WA link ordering
-              const waNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '628123456789';
-              const waMessage = encodeURIComponent(`Halo Muladari Coffee, saya ingin memesan menu: ${item.name} (${formatCurrency(item.price)})`);
-              window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank');
+            onClick={(e) => {
+              e.stopPropagation(); // Avoid double triggers
+              onSelect();
             }}
             className="text-xs font-semibold text-caramel hover:text-espresso transition-colors duration-300 flex items-center space-x-1"
           >
-            <span>Pesan Sekarang</span>
+            <span>Lihat Detail</span>
             <span>→</span>
           </button>
         </div>
