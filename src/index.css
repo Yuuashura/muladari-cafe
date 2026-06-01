@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-cream text-espresso font-dmsans antialiased selection:bg-caramel selection:text-cream;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-cream;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-mocha rounded-full border-2 border-cream hover:bg-espresso transition-colors duration-300;
+}
+
+/* Swiper overrides for customization */
+.swiper-pagination-bullet {
+  @apply bg-mocha !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-caramel w-6 rounded-full transition-all duration-300 !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  @apply text-caramel hover:text-espresso transition-colors duration-300 !important;
+}
