@@ -67,11 +67,11 @@ const MenuSection = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedItem(null)}
-              className="fixed inset-0 z-50 bg-espresso/95 flex items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out"
+              className="fixed inset-0 z-50 bg-espresso/95 flex justify-center items-start md:items-center overflow-y-auto p-4 md:p-6 backdrop-blur-sm cursor-zoom-out"
             >
               <button 
                 onClick={() => setSelectedItem(null)}
-                className="absolute top-6 right-6 text-cream hover:text-gold bg-mocha/50 p-2 rounded-full transition-colors duration-300 focus:outline-none"
+                className="fixed top-6 right-6 z-50 text-cream hover:text-gold bg-mocha/50 p-2 rounded-full transition-colors duration-300 focus:outline-none"
                 aria-label="Close details"
               >
                 <X className="w-6 h-6" />
@@ -83,17 +83,17 @@ const MenuSection = () => {
                 exit={{ scale: 0.9, y: 30 }}
                 transition={{ type: 'spring', damping: 25 }}
                 onClick={(e) => e.stopPropagation()}
-                className="max-w-3xl w-full bg-espresso border-2 border-mocha/30 rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row cursor-default"
+                className="max-w-3xl w-full bg-espresso border-2 border-mocha/30 rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row cursor-default my-auto"
               >
                 {/* Image */}
-                <div className="md:w-1/2 h-[260px] md:h-[400px] bg-mocha/20 overflow-hidden relative">
+                <div className="md:w-1/2 h-[50vh] md:h-[500px] bg-black/40 overflow-hidden relative flex items-center justify-center">
                   <img 
                     src={selectedItem.image} 
                     alt={selectedItem.name} 
-                    className="w-full h-full object-cover vintage-photo"
+                    className="w-full h-full object-contain vintage-photo"
                   />
                   {selectedItem.isPopular && (
-                    <div className="absolute top-4 left-4 bg-gold text-espresso font-semibold text-xs px-3 py-1.5 rounded-full flex items-center space-x-1 shadow-md border border-cream/20">
+                    <div className="absolute top-4 left-4 bg-gold text-espresso font-semibold text-xs px-3 py-1.5 rounded-full flex items-center space-x-1 shadow-md border border-cream/20 z-10">
                       <Sparkles className="w-3 h-3 fill-espresso" />
                       <span>Terfavorit</span>
                     </div>
@@ -101,7 +101,7 @@ const MenuSection = () => {
                 </div>
                 
                 {/* Details */}
-                <div className="md:w-1/2 p-8 flex flex-col justify-between text-cream bg-espresso">
+                <div className="md:w-1/2 p-8 flex flex-col justify-between text-cream bg-espresso border-t md:border-t-0 md:border-l border-mocha/30">
                   <div>
                     <span className="text-xs uppercase tracking-widest font-semibold text-gold">
                       {selectedItem.category === 'hot' ? 'Kopi Panas' : selectedItem.category === 'cold' ? 'Kopi Dingin' : selectedItem.category === 'non-kopi' ? 'Non-Kopi' : 'Makanan'}
