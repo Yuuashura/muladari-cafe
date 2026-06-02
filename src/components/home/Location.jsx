@@ -1,27 +1,6 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Star } from 'lucide-react';
+import { MapPin, Phone, Star, Clock } from 'lucide-react';
 import SectionTitle from '../common/SectionTitle';
-
-const outlets = [
-  {
-    name: 'Outlet Utama (Muladari Kopi)',
-    address: 'GHXV+P8X, Baringin, Kec. Lima Kaum, Batusangkar, Sumatera Barat (Depan Emerone Hotel)',
-    isPrimary: true,
-    mapsLink: 'https://maps.app.goo.gl/BTGMt4qYe9tDfzA39'
-  },
-  {
-    name: 'Outlet Gedung Nasional',
-    address: 'Depan Gedung Nasional Batusangkar',
-    isPrimary: false,
-    mapsLink: 'https://maps.google.com/?q=Gedung+Nasional+Batusangkar'
-  },
-  {
-    name: 'Outlet Kampus UIN',
-    address: 'Kampus 2 UIN Mahmud Yunus, Batusangkar',
-    isPrimary: false,
-    mapsLink: 'https://maps.google.com/?q=UIN+Mahmud+Yunus+Batusangkar+Kampus+2'
-  }
-];
 
 const Location = () => {
   return (
@@ -29,11 +8,11 @@ const Location = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
           title="Kunjungi Coffee Shop Kami" 
-          subtitle="Lokasi & Outlet" 
+          subtitle="Lokasi & Jam Operasional" 
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
-          {/* Address Details (5 cols) */}
+          {/* Address & Hours Details (5 cols) */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -58,39 +37,57 @@ const Location = () => {
                 </div>
               </div>
 
-              {/* Outlets List */}
+              {/* Location & Operating Hours */}
               <div className="space-y-4">
-                {outlets.map((outlet, idx) => (
-                  <div 
-                    key={idx}
-                    className={`p-5 rounded-xl border-2 transition-all duration-300 ${
-                      outlet.isPrimary 
-                        ? 'bg-cream border-espresso/35 shadow-[4px_4px_0px_0px_rgba(19,62,43,0.15)]' 
-                        : 'bg-cream/40 border-espresso/15 shadow-[2px_2px_0px_0px_rgba(19,62,43,0.05)] hover:border-espresso/30 hover:shadow-[4px_4px_0px_0px_rgba(19,62,43,0.15)]'
-                    }`}
-                  >
-                    <div className="flex items-start space-x-3">
-                      <MapPin className={`w-5 h-5 mt-0.5 shrink-0 ${outlet.isPrimary ? 'text-caramel' : 'text-mocha'}`} />
-                      <div className="space-y-1">
-                        <h4 className="font-playfair font-bold text-espresso">
-                          {outlet.name}
-                        </h4>
-                        <p className="font-dmsans text-sm text-espresso/70 leading-relaxed">
-                          {outlet.address}
-                        </p>
-                        <a 
-                          href={outlet.mapsLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center space-x-1 text-xs font-semibold text-caramel hover:text-espresso transition-colors duration-300 pt-1"
-                        >
-                          <span>Rute Google Maps</span>
-                          <span>→</span>
-                        </a>
+                {/* Location Card */}
+                <div className="p-5 rounded-xl border-2 border-espresso/35 bg-cream shadow-[4px_4px_0px_0px_rgba(19,62,43,0.15)] transition-all duration-300">
+                  <div className="flex items-start space-x-3">
+                    <MapPin className="w-5 h-5 mt-0.5 shrink-0 text-caramel" />
+                    <div className="space-y-1">
+                      <h4 className="font-playfair font-bold text-espresso">
+                        Alamat Coffee Shop
+                      </h4>
+                      <p className="font-dmsans text-sm text-espresso/70 leading-relaxed">
+                        GHXV+P8X, Baringin, Kec. Lima Kaum, Batusangkar, Sumatera Barat (Depan Emerone Hotel)
+                      </p>
+                      <a 
+                        href="https://maps.app.goo.gl/BTGMt4qYe9tDfzA39"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center space-x-1 text-xs font-semibold text-caramel hover:text-espresso transition-colors duration-300 pt-1"
+                      >
+                        <span>Petunjuk Arah Google Maps</span>
+                        <span>→</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Operating Hours Card */}
+                <div className="p-5 rounded-xl border-2 border-espresso/15 bg-cream/40 shadow-[2px_2px_0px_0px_rgba(19,62,43,0.05)] hover:border-espresso/30 hover:shadow-[4px_4px_0px_0px_rgba(19,62,43,0.15)] transition-all duration-300">
+                  <div className="flex items-start space-x-3">
+                    <Clock className="w-5 h-5 mt-0.5 shrink-0 text-mocha" />
+                    <div className="space-y-2 w-full">
+                      <h4 className="font-playfair font-bold text-espresso">
+                        Jam Operasional
+                      </h4>
+                      <div className="font-dmsans text-sm text-espresso/80 space-y-2.5">
+                        <div className="flex justify-between items-center border-b border-mocha/10 pb-1.5">
+                          <span className="font-medium text-espresso/70">Senin - Jumat</span>
+                          <span className="font-semibold text-espresso">10.00 - 22.00 WIB</span>
+                        </div>
+                        <div className="flex justify-between items-center border-b border-mocha/10 pb-1.5">
+                          <span className="font-medium text-espresso/70">Sabtu</span>
+                          <span className="font-semibold text-espresso">10.00 - 00.00 WIB</span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="font-medium text-espresso/70">Minggu</span>
+                          <span className="font-semibold text-espresso">10.00 - 22.00 WIB</span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
 
