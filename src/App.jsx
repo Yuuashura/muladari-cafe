@@ -26,29 +26,69 @@ const CoffeeBean = ({ className, style }) => (
   </motion.svg>
 );
 
-const MainLayout = () => {
+const FloatingCoffeeBean = ({ top, left, right, size, speed, rot, color }) => {
   const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 8000], [0, speed]);
+  const rotate = useTransform(scrollY, [0, 8000], [rot, rot + 180]);
 
-  // Create parallax floating effects for each bean
-  const y1 = useTransform(scrollY, [0, 8000], [0, -350]);
-  const y2 = useTransform(scrollY, [0, 8000], [0, 450]);
-  const y3 = useTransform(scrollY, [0, 8000], [0, -250]);
-  const y4 = useTransform(scrollY, [0, 8000], [0, 500]);
-  const y5 = useTransform(scrollY, [0, 8000], [0, -200]);
-  const y6 = useTransform(scrollY, [0, 8000], [0, 400]);
-  const y7 = useTransform(scrollY, [0, 8000], [0, -300]);
-  const y8 = useTransform(scrollY, [0, 8000], [0, 250]);
+  return (
+    <CoffeeBean 
+      className={`${size} ${color}`} 
+      style={{ 
+        top, 
+        left: left || undefined, 
+        right: right || undefined,
+        y, 
+        rotate 
+      }} 
+    />
+  );
+};
 
-  // Rotations for 3D depth feeling
-  const r1 = useTransform(scrollY, [0, 8000], [-25, 90]);
-  const r2 = useTransform(scrollY, [0, 8000], [45, -45]);
-  const r3 = useTransform(scrollY, [0, 8000], [15, 180]);
-  const r4 = useTransform(scrollY, [0, 8000], [-60, 60]);
-  const r5 = useTransform(scrollY, [0, 8000], [35, -90]);
-  const r6 = useTransform(scrollY, [0, 8000], [-15, 120]);
-  const r7 = useTransform(scrollY, [0, 8000], [70, -70]);
-  const r8 = useTransform(scrollY, [0, 8000], [-40, 140]);
+const floatingBeansData = [
+  // Section 1: Hero / Top (0% - 15%)
+  { top: '3%', left: '4%', size: 'w-10 h-10 md:w-14 md:h-14', speed: -180, rot: 45, color: 'text-caramel/9' },
+  { top: '7%', right: '5%', size: 'w-16 h-16 md:w-20 md:h-20', speed: 220, rot: -60, color: 'text-espresso/8' },
+  { top: '11%', left: '80%', size: 'w-8 h-8 md:w-12 md:h-12', speed: -140, rot: 90, color: 'text-caramel/10' },
+  { top: '14%', left: '6%', size: 'w-12 h-12 md:w-16 md:h-16', speed: 170, rot: -15, color: 'text-espresso/7' },
 
+  // Section 2: Story (15% - 30%)
+  { top: '19%', left: '10%', size: 'w-20 h-20 md:w-24 md:h-24', speed: 300, rot: 120, color: 'text-espresso/6' },
+  { top: '23%', right: '8%', size: 'w-10 h-10 md:w-14 md:h-14', speed: -250, rot: -30, color: 'text-caramel/9' },
+  { top: '26%', left: '75%', size: 'w-14 h-14 md:w-18 md:h-18', speed: 200, rot: 75, color: 'text-espresso/8' },
+  { top: '29%', left: '3%', size: 'w-12 h-12 md:w-16 md:h-16', speed: -190, rot: -45, color: 'text-caramel/10' },
+
+  // Section 3: Menu (30% - 50%)
+  { top: '34%', right: '4%', size: 'w-22 h-22 md:w-26 md:h-26', speed: 350, rot: 160, color: 'text-espresso/6' },
+  { top: '38%', left: '12%', size: 'w-8 h-8 md:w-12 md:h-12', speed: -160, rot: -90, color: 'text-caramel/11' },
+  { top: '42%', right: '10%', size: 'w-18 h-18 md:w-22 md:h-22', speed: 260, rot: 110, color: 'text-espresso/7' },
+  { top: '45%', left: '5%', size: 'w-16 h-16 md:w-20 md:h-20', speed: -280, rot: -75, color: 'text-caramel/9' },
+  { top: '49%', right: '7%', size: 'w-10 h-10 md:w-14 md:h-14', speed: 190, rot: 45, color: 'text-espresso/8' },
+
+  // Section 4: Vibes (50% - 65%)
+  { top: '53%', right: '3%', size: 'w-12 h-12 md:w-16 md:h-16', speed: 180, rot: 40, color: 'text-espresso/8' },
+  { top: '57%', left: '8%', size: 'w-20 h-20 md:w-24 md:h-24', speed: -320, rot: -120, color: 'text-caramel/6' },
+  { top: '61%', right: '15%', size: 'w-10 h-10 md:w-14 md:h-14', speed: 150, rot: 80, color: 'text-espresso/9' },
+  { top: '64%', left: '4%', size: 'w-14 h-14 md:w-18 md:h-18', speed: -210, rot: -65, color: 'text-caramel/10' },
+
+  // Section 5: Gallery (65% - 80%)
+  { top: '68%', left: '3%', size: 'w-16 h-16 md:w-20 md:h-20', speed: -220, rot: -50, color: 'text-caramel/8' },
+  { top: '72%', right: '6%', size: 'w-22 h-22 md:w-26 md:h-26', speed: 380, rot: 135, color: 'text-espresso/5' },
+  { top: '76%', left: '80%', size: 'w-12 h-12 md:w-16 md:h-16', speed: -170, rot: 60, color: 'text-caramel/10' },
+  { top: '79%', left: '6%', size: 'w-8 h-8 md:w-12 md:h-12', speed: 190, rot: -80, color: 'text-espresso/11' },
+
+  // Section 6: Events (80% - 90%)
+  { top: '83%', right: '4%', size: 'w-18 h-18 md:w-22 md:h-22', speed: -300, rot: 150, color: 'text-caramel/7' },
+  { top: '86%', left: '10%', size: 'w-14 h-14 md:w-18 md:h-18', speed: 240, rot: -35, color: 'text-espresso/8' },
+  { top: '89%', right: '8%', size: 'w-10 h-10 md:w-14 md:h-14', speed: -150, rot: 110, color: 'text-caramel/9' },
+
+  // Section 7: Location / Contact (90% - 100%)
+  { top: '92%', right: '10%', size: 'w-12 h-12 md:w-16 md:h-16', speed: -180, rot: 100, color: 'text-caramel/9' },
+  { top: '95%', left: '3%', size: 'w-18 h-18 md:w-22 md:h-22', speed: 210, rot: -110, color: 'text-espresso/8' },
+  { top: '98%', right: '5%', size: 'w-10 h-10 md:w-14 md:h-14', speed: -130, rot: 25, color: 'text-caramel/10' }
+];
+
+const MainLayout = () => {
   return (
     <div className="min-h-screen bg-cream text-espresso overflow-x-hidden relative">
       {/* 90s Film Grain Overlay */}
@@ -56,14 +96,9 @@ const MainLayout = () => {
 
       {/* Floating Coffee Beans Container */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <CoffeeBean className="top-[6%] left-[-20px] md:left-[4%] w-14 h-14 md:w-16 md:h-16 text-caramel/10" style={{ y: y1, rotate: r1 }} />
-        <CoffeeBean className="top-[16%] right-[-30px] md:right-[5%] w-20 h-20 md:w-24 md:h-24 text-espresso/8" style={{ y: y2, rotate: r2 }} />
-        <CoffeeBean className="top-[28%] left-[-10px] md:left-[8%] w-16 h-16 md:w-20 md:h-20 text-caramel/8" style={{ y: y3, rotate: r3 }} />
-        <CoffeeBean className="top-[42%] right-[-40px] md:right-[6%] w-24 h-24 md:w-28 md:h-28 text-espresso/10" style={{ y: y4, rotate: r4 }} />
-        <CoffeeBean className="top-[55%] left-[-15px] md:left-[5%] w-12 h-12 md:w-14 md:h-14 text-caramel/12" style={{ y: y5, rotate: r5 }} />
-        <CoffeeBean className="top-[68%] right-[-25px] md:right-[8%] w-20 h-20 md:w-24 md:h-24 text-espresso/8" style={{ y: y6, rotate: r6 }} />
-        <CoffeeBean className="top-[80%] left-[-20px] md:left-[6%] w-16 h-16 md:w-20 md:h-20 text-caramel/10" style={{ y: y7, rotate: r7 }} />
-        <CoffeeBean className="top-[91%] right-[-15px] md:right-[4%] w-14 h-14 md:w-16 md:h-16 text-espresso/12" style={{ y: y8, rotate: r8 }} />
+        {floatingBeansData.map((bean, idx) => (
+          <FloatingCoffeeBean key={idx} {...bean} />
+        ))}
       </div>
 
       {/* Navigation Header */}
