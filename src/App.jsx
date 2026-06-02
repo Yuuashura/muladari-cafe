@@ -47,45 +47,82 @@ const FloatingCoffeeBean = ({ top, left, right, size, speed, rot, color }) => {
 
 const floatingBeansData = [
   // Section 1: Hero / Top (0% - 15%)
-  { top: '3%', left: '4%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -180, rot: 45, color: 'text-caramel/9' },
-  { top: '7%', right: '5%', size: 'w-8 h-8 md:w-10 md:h-10', speed: 220, rot: -60, color: 'text-espresso/8' },
-  { top: '11%', left: '80%', size: 'w-4 h-4 md:w-6 md:h-6', speed: -140, rot: 90, color: 'text-caramel/10' },
-  { top: '14%', left: '6%', size: 'w-6 h-6 md:w-8 md:h-8', speed: 170, rot: -15, color: 'text-espresso/7' },
+  { top: '1%', left: '3%', size: 'w-4 h-4 md:w-6 md:h-6', speed: -120, rot: 30, color: 'text-caramel/8' },
+  { top: '2.5%', right: '4%', size: 'w-6 h-6 md:w-8 md:h-8', speed: 180, rot: -45, color: 'text-espresso/8' },
+  { top: '4%', left: '12%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -200, rot: 60, color: 'text-caramel/10' },
+  { top: '6%', right: '15%', size: 'w-4 h-4 md:w-5 md:h-5', speed: 150, rot: -15, color: 'text-espresso/7' },
+  { top: '7.5%', left: '82%', size: 'w-8 h-8 md:w-10 md:h-10', speed: -250, rot: 90, color: 'text-caramel/9' },
+  { top: '9%', left: '8%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 210, rot: -30, color: 'text-espresso/9' },
+  { top: '11%', right: '8%', size: 'w-6 h-6 md:w-8 md:h-8', speed: -170, rot: 120, color: 'text-caramel/8' },
+  { top: '13%', left: '78%', size: 'w-4 h-4 md:w-6 md:h-6', speed: 140, rot: -60, color: 'text-espresso/7' },
+  { top: '15%', left: '4%', size: 'w-7 h-7 md:w-9 md:h-9', speed: -220, rot: 15, color: 'text-caramel/10' },
 
   // Section 2: Story (15% - 30%)
-  { top: '19%', left: '10%', size: 'w-10 h-10 md:w-12 md:h-12', speed: 300, rot: 120, color: 'text-espresso/6' },
-  { top: '23%', right: '8%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -250, rot: -30, color: 'text-caramel/9' },
-  { top: '26%', left: '75%', size: 'w-7 h-7 md:w-9 md:h-9', speed: 200, rot: 75, color: 'text-espresso/8' },
-  { top: '29%', left: '3%', size: 'w-6 h-6 md:w-8 md:h-8', speed: -190, rot: -45, color: 'text-caramel/10' },
+  { top: '17%', right: '6%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 160, rot: 80, color: 'text-espresso/8' },
+  { top: '18.5%', left: '14%', size: 'w-9 h-9 md:w-11 md:h-11', speed: -300, rot: -45, color: 'text-caramel/9' },
+  { top: '20%', right: '12%', size: 'w-4 h-4 md:w-5 md:h-5', speed: 250, rot: 135, color: 'text-espresso/7' },
+  { top: '22%', left: '85%', size: 'w-6 h-6 md:w-8 md:h-8', speed: -180, rot: -90, color: 'text-caramel/11' },
+  { top: '23.5%', left: '5%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 190, rot: 40, color: 'text-espresso/8' },
+  { top: '25%', right: '18%', size: 'w-8 h-8 md:w-10 md:h-10', speed: -260, rot: -110, color: 'text-caramel/8' },
+  { top: '26.5%', left: '74%', size: 'w-4 h-4 md:w-6 md:h-6', speed: 220, rot: 75, color: 'text-espresso/9' },
+  { top: '28%', right: '4%', size: 'w-7 h-7 md:w-9 md:h-9', speed: -210, rot: -30, color: 'text-caramel/9' },
+  { top: '29.5%', left: '10%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 170, rot: 160, color: 'text-espresso/8' },
 
   // Section 3: Menu (30% - 50%)
-  { top: '34%', right: '4%', size: 'w-11 h-11 md:w-13 md:h-13', speed: 350, rot: 160, color: 'text-espresso/6' },
-  { top: '38%', left: '12%', size: 'w-4 h-4 md:w-6 md:h-6', speed: -160, rot: -90, color: 'text-caramel/11' },
-  { top: '42%', right: '10%', size: 'w-9 h-9 md:w-11 md:h-11', speed: 260, rot: 110, color: 'text-espresso/7' },
-  { top: '45%', left: '5%', size: 'w-8 h-8 md:w-10 md:h-10', speed: -280, rot: -75, color: 'text-caramel/9' },
-  { top: '49%', right: '7%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 190, rot: 45, color: 'text-espresso/8' },
+  { top: '31%', right: '10%', size: 'w-4 h-4 md:w-6 md:h-6', speed: -140, rot: -50, color: 'text-caramel/10' },
+  { top: '32.5%', left: '6%', size: 'w-8 h-8 md:w-10 md:h-10', speed: 280, rot: 90, color: 'text-espresso/6' },
+  { top: '34%', right: '5%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -190, rot: -15, color: 'text-caramel/9' },
+  { top: '35.5%', left: '88%', size: 'w-6 h-6 md:w-8 md:h-8', speed: 230, rot: 110, color: 'text-espresso/8' },
+  { top: '37%', left: '12%', size: 'w-4 h-4 md:w-5 md:h-5', speed: -250, rot: -75, color: 'text-caramel/11' },
+  { top: '38.5%', right: '15%', size: 'w-9 h-9 md:w-11 md:h-11', speed: 320, rot: 145, color: 'text-espresso/7' },
+  { top: '40%', left: '4%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -180, rot: -40, color: 'text-caramel/9' },
+  { top: '41.5%', right: '8%', size: 'w-7 h-7 md:w-9 md:h-9', speed: 200, rot: 65, color: 'text-espresso/8' },
+  { top: '43%', left: '82%', size: 'w-4 h-4 md:w-6 md:h-6', speed: -150, rot: -120, color: 'text-caramel/10' },
+  { top: '44.5%', right: '12%', size: 'w-8 h-8 md:w-10 md:h-10', speed: 270, rot: 80, color: 'text-espresso/7' },
+  { top: '46%', left: '8%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -210, rot: -15, color: 'text-caramel/9' },
+  { top: '47.5%', right: '4%', size: 'w-6 h-6 md:w-8 md:h-8', speed: 190, rot: 130, color: 'text-espresso/8' },
+  { top: '49%', left: '85%', size: 'w-4 h-4 md:w-5 md:h-5', speed: -130, rot: -60, color: 'text-caramel/11' },
 
   // Section 4: Vibes (50% - 65%)
-  { top: '53%', right: '3%', size: 'w-6 h-6 md:w-8 md:h-8', speed: 180, rot: 40, color: 'text-espresso/8' },
-  { top: '57%', left: '8%', size: 'w-10 h-10 md:w-12 md:h-12', speed: -320, rot: -120, color: 'text-caramel/6' },
-  { top: '61%', right: '15%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 150, rot: 80, color: 'text-espresso/9' },
-  { top: '64%', left: '4%', size: 'w-7 h-7 md:w-9 md:h-9', speed: -210, rot: -65, color: 'text-caramel/10' },
+  { top: '51%', left: '5%', size: 'w-7 h-7 md:w-9 md:h-9', speed: 240, rot: 45, color: 'text-espresso/8' },
+  { top: '52.5%', right: '6%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -170, rot: -90, color: 'text-caramel/10' },
+  { top: '54%', left: '78%', size: 'w-8 h-8 md:w-10 md:h-10', speed: 200, rot: 115, color: 'text-espresso/6' },
+  { top: '55.5%', right: '14%', size: 'w-4 h-4 md:w-6 md:h-6', speed: -220, rot: -30, color: 'text-caramel/9' },
+  { top: '57%', left: '10%', size: 'w-9 h-9 md:w-11 md:h-11', speed: 300, rot: 150, color: 'text-espresso/7' },
+  { top: '58.5%', right: '3%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -150, rot: -75, color: 'text-caramel/8' },
+  { top: '60%', left: '84%', size: 'w-6 h-6 md:w-8 md:h-8', speed: 180, rot: 60, color: 'text-espresso/9' },
+  { top: '61.5%', right: '18%', size: 'w-4 h-4 md:w-5 md:h-5', speed: -130, rot: -45, color: 'text-caramel/10' },
+  { top: '63%', left: '3%', size: 'w-7 h-7 md:w-9 md:h-9', speed: 250, rot: 100, color: 'text-espresso/8' },
+  { top: '64.5%', right: '8%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -190, rot: -60, color: 'text-caramel/9' },
 
   // Section 5: Gallery (65% - 80%)
-  { top: '68%', left: '3%', size: 'w-8 h-8 md:w-10 md:h-10', speed: -220, rot: -50, color: 'text-caramel/8' },
-  { top: '72%', right: '6%', size: 'w-11 h-11 md:w-13 md:h-13', speed: 380, rot: 135, color: 'text-espresso/5' },
-  { top: '76%', left: '80%', size: 'w-6 h-6 md:w-8 md:h-8', speed: -170, rot: 60, color: 'text-caramel/10' },
-  { top: '79%', left: '6%', size: 'w-4 h-4 md:w-6 md:h-6', speed: 190, rot: -80, color: 'text-espresso/11' },
+  { top: '66%', left: '80%', size: 'w-4 h-4 md:w-6 md:h-6', speed: 160, rot: 35, color: 'text-espresso/8' },
+  { top: '67.5%', left: '6%', size: 'w-8 h-8 md:w-10 md:h-10', speed: -230, rot: -110, color: 'text-caramel/8' },
+  { top: '69%', right: '5%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 210, rot: 125, color: 'text-espresso/7' },
+  { top: '70.5%', left: '12%', size: 'w-6 h-6 md:w-8 md:h-8', speed: -180, rot: -40, color: 'text-caramel/10' },
+  { top: '72%', right: '10%', size: 'w-9 h-9 md:w-11 md:h-11', speed: 350, rot: 80, color: 'text-espresso/5' },
+  { top: '73.5%', left: '86%', size: 'w-4 h-4 md:w-5 md:h-5', speed: -150, rot: -95, color: 'text-caramel/9' },
+  { top: '75%', left: '4%', size: 'w-7 h-7 md:w-9 md:h-9', speed: 200, rot: 150, color: 'text-espresso/8' },
+  { top: '76.5%', right: '15%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -240, rot: -30, color: 'text-caramel/10' },
+  { top: '78%', left: '78%', size: 'w-8 h-8 md:w-10 md:h-10', speed: 190, rot: 60, color: 'text-espresso/9' },
+  { top: '79.5%', right: '6%', size: 'w-4 h-4 md:w-6 md:h-6', speed: -170, rot: -85, color: 'text-caramel/11' },
 
   // Section 6: Events (80% - 90%)
-  { top: '83%', right: '4%', size: 'w-9 h-9 md:w-11 md:h-11', speed: -300, rot: 150, color: 'text-caramel/7' },
-  { top: '86%', left: '10%', size: 'w-7 h-7 md:w-9 md:h-9', speed: 240, rot: -35, color: 'text-espresso/8' },
-  { top: '89%', right: '8%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -150, rot: 110, color: 'text-caramel/9' },
+  { top: '81%', left: '8%', size: 'w-6 h-6 md:w-8 md:h-8', speed: 220, rot: 110, color: 'text-espresso/8' },
+  { top: '82.5%', right: '4%', size: 'w-8 h-8 md:w-10 md:h-10', speed: -280, rot: -50, color: 'text-caramel/7' },
+  { top: '84%', left: '82%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 180, rot: 135, color: 'text-espresso/8' },
+  { top: '85.5%', left: '3%', size: 'w-7 h-7 md:w-9 md:h-9', speed: -210, rot: -35, color: 'text-caramel/9' },
+  { top: '87%', right: '12%', size: 'w-4 h-4 md:w-5 md:h-5', speed: 260, rot: 90, color: 'text-espresso/7' },
+  { top: '88.5%', left: '14%', size: 'w-6 h-6 md:w-8 md:h-8', speed: -150, rot: -65, color: 'text-caramel/10' },
+  { top: '90%', right: '6%', size: 'w-5 h-5 md:w-7 md:h-7', speed: 170, rot: 120, color: 'text-espresso/9' },
 
-  // Section 7: Location / Contact (90% - 100%)
-  { top: '92%', right: '10%', size: 'w-6 h-6 md:w-8 md:h-8', speed: -180, rot: 100, color: 'text-caramel/9' },
-  { top: '95%', left: '3%', size: 'w-9 h-9 md:w-11 md:h-11', speed: 210, rot: -110, color: 'text-espresso/8' },
-  { top: '98%', right: '5%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -130, rot: 25, color: 'text-caramel/10' }
+  // Section 7: Location / Contact / Footer (90% - 100%)
+  { top: '91.5%', left: '85%', size: 'w-4 h-4 md:w-6 md:h-6', speed: -130, rot: -45, color: 'text-caramel/11' },
+  { top: '93%', left: '4%', size: 'w-8 h-8 md:w-10 md:h-10', speed: 230, rot: 75, color: 'text-espresso/8' },
+  { top: '94.5%', right: '8%', size: 'w-5 h-5 md:w-7 md:h-7', speed: -190, rot: -100, color: 'text-caramel/9' },
+  { top: '96%', left: '80%', size: 'w-6 h-6 md:w-8 md:h-8', speed: 200, rot: 140, color: 'text-espresso/7' },
+  { top: '97.5%', left: '3%', size: 'w-4 h-4 md:w-5 md:h-5', speed: -160, rot: -30, color: 'text-caramel/10' },
+  { top: '99%', right: '5%', size: 'w-7 h-7 md:w-9 md:h-9', speed: 150, rot: 110, color: 'text-espresso/8' }
 ];
 
 const MainLayout = () => {
