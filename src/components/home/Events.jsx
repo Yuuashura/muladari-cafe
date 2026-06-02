@@ -86,7 +86,7 @@ const Events = () => {
           <div className="relative z-10 p-8 md:p-16 max-w-2xl text-cream">
             <span className="inline-flex items-center space-x-2 bg-gold/20 text-gold text-xs font-bold px-3 py-1.5 rounded-full border border-gold/30 mb-6 uppercase tracking-widest">
               <Sparkles className="w-3.5 h-3.5 fill-gold animate-pulse" />
-              <span>Project Baru</span>
+              <span>Sudah Buka</span>
             </span>
 
             <h3 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4">
