@@ -68,27 +68,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Business Info */}
-          <div>
-            <h3 className="font-playfair text-lg font-bold text-gold uppercase tracking-wider mb-4">Jam Operasional</h3>
-            <ul className="space-y-3 text-sm text-cream/80">
-              <li className="flex items-start space-x-2">
-                <Clock className="w-4 h-4 text-gold mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-semibold text-cream">Senin - Jumat & Minggu</p>
-                  <p className="text-xs">10.00 - 22.00 WIB</p>
-                </div>
-              </li>
-              <li className="flex items-start space-x-2">
-                <Clock className="w-4 h-4 text-gold mt-0.5 shrink-0" />
-                <div>
-                  <p className="font-semibold text-cream">Sabtu</p>
-                  <p className="text-xs">10.00 - 00.00 WIB</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-
           {/* Contacts */}
           <div>
             <h3 className="font-playfair text-lg font-bold text-gold uppercase tracking-wider mb-4">Hubungi</h3>
