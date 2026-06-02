@@ -63,11 +63,11 @@ const Gallery = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setSelectedImage(null)}
-              className="fixed inset-0 z-50 bg-espresso/95 flex items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out"
+              className="fixed inset-0 z-50 bg-espresso/95 flex justify-center items-start md:items-center overflow-y-auto p-4 md:p-6 backdrop-blur-sm cursor-zoom-out"
             >
               <button 
                 onClick={() => setSelectedImage(null)}
-                className="absolute top-6 right-6 text-cream hover:text-gold bg-mocha/50 p-2 rounded-full transition-colors duration-300 focus:outline-none"
+                className="fixed top-6 right-6 z-50 text-cream hover:text-gold bg-mocha/50 p-2 rounded-full transition-colors duration-300 focus:outline-none"
                 aria-label="Close lightbox"
               >
                 <X className="w-6 h-6" />
@@ -79,18 +79,18 @@ const Gallery = () => {
                 exit={{ scale: 0.9, y: 30 }}
                 transition={{ type: 'spring', damping: 25 }}
                 onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image
-                className="max-w-4xl w-full bg-espresso border border-mocha rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row cursor-default"
+                className="max-w-4xl w-full bg-espresso border border-mocha rounded-2xl overflow-hidden shadow-2xl flex flex-col md:flex-row cursor-default my-auto"
               >
                 {/* Image */}
-                <div className="md:w-2/3 h-[300px] md:h-[500px] bg-mocha/20">
+                <div className="md:w-2/3 h-[50vh] md:h-[600px] bg-black/40 flex items-center justify-center relative">
                   <img 
                     src={selectedImage.image} 
                     alt={selectedImage.title} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 {/* Details */}
-                <div className="md:w-1/3 p-8 flex flex-col justify-center text-cream bg-espresso">
+                <div className="md:w-1/3 p-8 flex flex-col justify-center text-cream bg-espresso border-t md:border-t-0 md:border-l border-mocha/30">
                   <span className="text-xs uppercase tracking-widest font-semibold text-gold mb-3">Muladari Moments</span>
                   <h3 className="font-playfair text-2xl md:text-3xl font-bold mb-4">{selectedImage.title}</h3>
                   <p className="font-dmsans text-sm md:text-base text-cream/80 leading-relaxed">{selectedImage.caption}</p>
