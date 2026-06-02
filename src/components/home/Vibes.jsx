@@ -107,13 +107,11 @@ const Vibes = () => {
                   <div className="pt-4 border-t border-mocha/30 flex flex-col sm:flex-row gap-4">
                     <button
                       onClick={() => {
-                        const waNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '628123456789';
-                        const waMessage = encodeURIComponent(`Halo Muladari Coffee, saya tertarik dengan suasana: ${selectedVibe.title}. Apakah saya bisa memesan tempat / berkunjung?`);
-                        window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank');
+                        window.open(`https://instagram.com/muladaricoffee`, '_blank');
                       }}
                       className="flex-1 px-5 py-3 bg-caramel hover:bg-gold text-cream hover:text-espresso font-semibold rounded-lg text-center transition-all duration-300 shadow-md text-sm"
                     >
-                      Hubungi Kami via WhatsApp
+                      Cek Instagram Kita
                     </button>
                     <button
                       onClick={() => setSelectedVibe(null)}

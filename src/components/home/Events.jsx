@@ -59,7 +59,7 @@ const Events = () => {
                     }}
                     className="text-xs font-bold text-caramel hover:text-espresso transition-colors duration-300 uppercase tracking-wider"
                   >
-                    Klaim Promo via WhatsApp →
+                    Lihat Detail Promo di Instagram →
                   </button>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Events = () => {
         >
           {/* Background image */}
           <div 
-            className="absolute inset-0 bg-cover bg-center opacity-30 hover:scale-105 transition-transform duration-1000 vintage-photo"
+            className="absolute inset-0 bg-fit bg-right opacity-30 hover:scale-105 transition-transform duration-1000 vintage-photo"
             style={{ backgroundImage: `url(${districtMuladari.image})` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-espresso via-espresso/90 to-transparent" />

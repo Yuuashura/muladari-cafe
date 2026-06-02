@@ -22,6 +22,6 @@ export const districtMuladari = {
   subtitle: 'The Next Level Hangout Hub in Town',
   description: 'Hadir dengan konsep unik yang menggabungkan premium coffee shop, creative space, dan slow-bar experience. Ruang kolaboratif yang nyaman dan hangat untuk menampung setiap cerita, diskusi, dan cita-cita Anda.',
   location: 'Baringin, Lima Kaum, Batusangkar, Tanah Datar',
-  image: 'https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1200&auto=format&fit=crop'
+  image: '/images/about.jpg'
 };
 
