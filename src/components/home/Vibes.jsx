@@ -105,14 +105,14 @@ const Vibes = () => {
                   </div>
                   
                   <div className="pt-4 border-t border-mocha/30 flex flex-col sm:flex-row gap-4">
-                    <button
-                      onClick={() => {
-                        window.open(`https://instagram.com/muladaricoffee`, '_blank');
-                      }}
+                    <a
+                      href="https://www.instagram.com/muladaricoffee/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex-1 px-5 py-3 bg-caramel hover:bg-gold text-cream hover:text-espresso font-semibold rounded-lg text-center transition-all duration-300 shadow-md text-sm"
                     >
                       Cek Instagram Kita
-                    </button>
+                    </a>
                     <button
                       onClick={() => setSelectedVibe(null)}
                       className="px-5 py-3 bg-transparent hover:bg-cream/10 border border-cream/30 hover:border-cream/80 text-cream font-semibold rounded-lg text-center transition-all duration-300 text-sm"

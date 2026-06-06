@@ -1,5 +1,5 @@
 import { MapPin, Clock, Phone, Heart } from 'lucide-react';
-import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram } from 'react-icons/fa';
 import { scrollToSection } from '../../utils/scrollToSection';
 
 const Footer = () => {
@@ -39,15 +39,6 @@ const Footer = () => {
               >
                 <FaInstagram className="w-5 h-5" />
               </a>
-              <a
-                href={waLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-mocha flex items-center justify-center hover:bg-gold hover:text-espresso transition-all duration-300 transform hover:-translate-y-1"
-                aria-label="WhatsApp"
-              >
-                <FaWhatsapp className="w-5 h-5" />
-              </a>
             </div>
           </div>
 
@@ -68,13 +59,25 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contacts */}
+          {/* Business Info */}
+          <div>
+            <h3 className="font-playfair text-lg font-bold text-gold uppercase tracking-wider mb-4">Jam Operasional</h3>
+            <ul className="space-y-3 text-sm text-cream/80">
+              <li className="flex items-start space-x-2">
+                <Clock className="w-4 h-4 text-gold mt-0.5 shrink-0" />
+                <div>
+                  <p className="font-semibold text-cream">Setiap Hari</p>
+                  <p className="text-xs">12.00 - 00.00 WIB</p>
+                </div>
+              </li>
+            </ul>
+          </div>
           <div>
             <h3 className="font-playfair text-lg font-bold text-gold uppercase tracking-wider mb-4">Hubungi</h3>
             <ul className="space-y-3 text-sm text-cream/80">
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
-                <span>Jl. Minang, depan Hotel Emerone, Batusangkar</span>
+                <span>District Muladari Social Bar, Baringin, Lima Kaum, Batusangkar</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-gold shrink-0" />

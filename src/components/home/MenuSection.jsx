@@ -115,16 +115,14 @@ const MenuSection = () => {
                   </div>
                   
                   <div className="pt-4 border-t border-mocha/30 flex flex-col sm:flex-row gap-4">
-                    <button
-                      onClick={() => {
-                        const waNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '628123456789';
-                        const waMessage = encodeURIComponent(`Halo Muladari Coffee, saya ingin memesan menu: ${selectedItem.name}`);
-                        window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank');
-                      }}
+                    <a
+                      href="https://www.instagram.com/muladaricoffee/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex-1 px-5 py-3 bg-caramel hover:bg-gold text-cream hover:text-espresso font-semibold rounded-lg text-center transition-all duration-300 shadow-md text-sm"
                     >
-                      Pesan via WhatsApp
-                    </button>
+                      Cek Instagram Kami
+                    </a>
                     <button
                       onClick={() => setSelectedItem(null)}
                       className="px-5 py-3 bg-transparent hover:bg-cream/10 border border-cream/30 hover:border-cream/80 text-cream font-semibold rounded-lg text-center transition-all duration-300 text-sm"
@@ -138,21 +136,7 @@ const MenuSection = () => {
           )}
         </AnimatePresence>
 
-        {/* PDF Menu Download / WhatsApp Ordering Info */}
-        <div className="mt-16 text-center">
-          <p className="font-dmsans text-espresso/70 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
-            Punya request racikan khusus atau ingin memesan catering untuk acara? Hubungi kami langsung via WhatsApp untuk kustomisasi sajian Anda.
-          </p>
-          <button 
-            onClick={() => {
-              const waNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '628123456789';
-              window.open(`https://wa.me/${waNumber}?text=Halo%20Muladari%20Coffee%2C%20saya%20ingin%20tanya%20mengenai%20layanan%20katering%20/%20pesanan%20khusus.`, '_blank');
-            }}
-            className="mt-6 inline-flex items-center space-x-2 px-6 py-3 bg-espresso hover:bg-mocha text-cream font-semibold rounded-lg transition-colors duration-300 shadow-md"
-          >
-            <span>Tanya Katering / Menu Kustom</span>
-          </button>
-        </div>
+
       </div>
     </section>
   );

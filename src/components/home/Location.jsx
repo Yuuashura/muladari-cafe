@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Star, Clock } from 'lucide-react';
+import { MapPin, Star, Clock } from 'lucide-react';
 import SectionTitle from '../common/SectionTitle';
 
 const Location = () => {
@@ -48,10 +48,10 @@ const Location = () => {
                         Alamat Coffee Shop
                       </h4>
                       <p className="font-dmsans text-sm text-espresso/70 leading-relaxed">
-                        GHXV+P8X, Baringin, Kec. Lima Kaum, Batusangkar, Sumatera Barat (Depan Emerone Hotel)
+                        District Muladari Social Bar, Baringin, Kec. Lima Kaum, Batusangkar, Sumatera Barat
                       </p>
                       <a 
-                        href="https://maps.app.goo.gl/BTGMt4qYe9tDfzA39"
+                        href="https://www.google.com/maps/place/District+Muladari+Social+Bar/@-0.4486267,100.5879883,769m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2fd52d005a86ae71:0x645533ca317b907c!8m2!3d-0.4486267!4d100.5879883!16s%2Fg%2F11mt8qc2_b"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center space-x-1 text-xs font-semibold text-caramel hover:text-espresso transition-colors duration-300 pt-1"
@@ -72,17 +72,9 @@ const Location = () => {
                         Jam Operasional
                       </h4>
                       <div className="font-dmsans text-sm text-espresso/80 space-y-2.5">
-                        <div className="flex justify-between items-center border-b border-mocha/10 pb-1.5">
-                          <span className="font-medium text-espresso/70">Senin - Jumat</span>
-                          <span className="font-semibold text-espresso">10.00 - 22.00 WIB</span>
-                        </div>
-                        <div className="flex justify-between items-center border-b border-mocha/10 pb-1.5">
-                          <span className="font-medium text-espresso/70">Sabtu</span>
-                          <span className="font-semibold text-espresso">10.00 - 00.00 WIB</span>
-                        </div>
                         <div className="flex justify-between items-center">
-                          <span className="font-medium text-espresso/70">Minggu</span>
-                          <span className="font-semibold text-espresso">10.00 - 22.00 WIB</span>
+                          <span className="font-medium text-espresso/70">Setiap Hari</span>
+                          <span className="font-semibold text-espresso">12.00 - 00.00 WIB</span>
                         </div>
                       </div>
                     </div>
@@ -91,20 +83,6 @@ const Location = () => {
               </div>
             </div>
 
-            {/* Quick Contact CTA */}
-            <div className="pt-4">
-              <button 
-                onClick={() => {
-                  const waNumber = import.meta.env.VITE_WHATSAPP_NUMBER || '628123456789';
-                  const waMessage = encodeURIComponent('Halo Muladari Coffee, saya mencari rute ke outlet utama Muladari Kopi. Boleh dibantu petunjuk jalannya?');
-                  window.open(`https://wa.me/${waNumber}?text=${waMessage}`, '_blank');
-                }}
-                className="w-full px-6 py-4 bg-caramel hover:bg-gold text-espresso font-semibold rounded-lg shadow-md flex items-center justify-center space-x-2 transition-all duration-300"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Hubungi Kami untuk Petunjuk Arah</span>
-              </button>
-            </div>
           </motion.div>
 
           {/* Interactive Map (7 cols) */}
@@ -116,8 +94,8 @@ const Location = () => {
             className="lg:col-span-7 h-[450px] lg:h-auto rounded-3xl overflow-hidden border-2 border-espresso/20 shadow-[8px_8px_0px_0px_rgba(19,62,43,0.18)] bg-mocha/10"
           >
             <iframe 
-              title="Peta Lokasi Muladari Coffee"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.6949244072853!2d100.59078917435646!3d-0.4506222352824379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd52d000c6fb251%3A0x54dcb6b31b312648!2sMuladari%20Kopi!5e0!3m2!1sid!2sid!4v1780302509040!5m2!1sid!2sid"
+              title="Peta Lokasi District Muladari Social Bar"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.692!2d100.5879883!3d-0.4486267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2fd52d005a86ae71%3A0x645533ca317b907c!2sDistrict%20Muladari%20Social%20Bar!5e0!3m2!1sid!2sid!4v1780302509040!5m2!1sid!2sid"
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 
