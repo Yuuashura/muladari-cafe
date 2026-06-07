@@ -93,6 +93,7 @@ const Footer = () => {
           <p className="flex items-center mt-2 md:mt-0">
             Dibuat dengan <Heart className="w-3 h-3 text-rose-500 mx-1 fill-rose-500" /> untuk pecinta kopi Indonesia.
           </p>
+          <p>Developer By <a href="https://www.instagram.com/yudis.ashura" target="_blank" rel="noopener noreferrer">@Yudis.Ashura</a></p>
         </div>
       </div>
     </footer>
