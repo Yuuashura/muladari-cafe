@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Camera, X, ChevronDown } from 'lucide-react';
 import SectionTitle from '../common/SectionTitle';
@@ -10,8 +10,18 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [visibleCount, setVisibleCount] = useState(BATCH);
 
-  const visibleItems = galleryList.slice(0, visibleCount);
-  const hasMore = visibleCount < galleryList.length;
+  // Fisher-Yates Shuffle algorithm to randomize gallery order on mount
+  const shuffledGallery = useMemo(() => {
+    const arr = [...galleryList];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }, []);
+
+  const visibleItems = shuffledGallery.slice(0, visibleCount);
+  const hasMore = visibleCount < shuffledGallery.length;
 
   return (
     <section id="gallery" className="py-24 bg-cream/35 overflow-hidden">
@@ -56,7 +66,7 @@ const Gallery = () => {
 
         {/* Counter */}
         <p className="text-center text-sm text-espresso/50 font-dmsans mt-8">
-          Menampilkan <span className="font-semibold text-espresso">{visibleItems.length}</span> dari <span className="font-semibold text-espresso">{galleryList.length}</span> foto
+          Menampilkan <span className="font-semibold text-espresso">{visibleItems.length}</span> dari <span className="font-semibold text-espresso">{shuffledGallery.length}</span> foto
         </p>
 
         {/* Load More Button */}

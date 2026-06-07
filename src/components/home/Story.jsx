@@ -48,24 +48,24 @@ const Story = () => {
             </h3>
             
             <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
-              Muladari Kopi is a charming coffee shop situated in the heart of Baringin, Lima Kaum, Tanah Datar Regency, West Sumatra, offering a cozy retreat for coffee enthusiasts and casual visitors alike. This spot expertly blends a vintage aesthetic with warm hospitality, creating an inviting atmosphere that feels both nostalgic and fresh.
+              Perjalanan kami tidak dimulai dari sebuah bangunan yang nyaman, melainkan dari atas sadel Vespa di pinggir Jalan Koto Gadih, Lima Kaum. Menyeduh kopi dari siang hingga larut malam, lapak kami kala itu menjadi ruang singgah bagi anak-anak muda dan riuhnya jalanan malam. Namun, dinamika jalanan dan ketidaknyamanan warga sekitar membuat kami harus menepi dan menutup lapak sementara waktu.
             </p>
             
             <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
-              The highlight here is undoubtedly their coffee selection, with a particular nod to their signature hazelnut milk coffee. It strikes a perfect balance, rich in flavor without overpowering sweetness, satisfying both those who cherish robust coffee notes and those who prefer a smoother sip. Customers have praised how the coffee compares favorably with offerings from the more established coffee shops in nearby Batusangkar.
+              Kami tak lantas menyerah. Berpindah haluan ke depan Gedung Nasional Batusangkar, kami mencoba peruntungan baru dengan menyajikan kopi racikan manual brew. Sayangnya, tantangan belum usai. Konsep "kopi kedai" masih sangat awam di mata publik yang terbiasa dengan kopi saset. Menyadari hal tersebut, kami memutuskan rehat sejenak, menjadikan momen itu sebagai waktu untuk berbenah dan mengoreksi arah langkah kami.
             </p>
 
             <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
-              Muladari Kopi thrives on delivering not just great coffee but a complete experience. The ambiance is thoughtfully crafted, featuring aesthetically pleasing decor that evokes a vintage vibe, making it an excellent place for relaxing, socializing, or enjoying a quiet moment. Friendly and attentive service adds to the comfort, tailoring each visit to leave a lasting impression.
+              Berbekal hasil introspeksi, pada awal tahun 2025 kami kembali merajut asa dengan menyewa sebuah kedai kecil di Jalan Minang. Di titik inilah, nama Mula Dari Kopi resmi digunakan. Perlahan tapi pasti, racikan kopi kami mulai dipahami dan dicintai. Aroma kopi yang diseduh berhasil menarik penikmat setianya, dan rasa kebersamaan di kedai kecil itu tumbuh semakin pekat.
             </p>
 
             <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
-              The location in Tanah Datar provides a scenic backdrop, allowing patrons to enjoy views of the surrounding cityscape while sipping their drinks. This makes Muladari Kopi a perfect destination for friends, couples, or anyone looking to unwind.
+              Antusiasme luar biasa dari para pelanggan membawa kami pada sebuah lompatan besar hanya dalam kurun waktu empat bulan. Kami berekspansi ke kawasan Parak Juar dan berevolusi menjadi Distrik Mula Dari Kopi. Mengusung vibes nostalgia era sebelum 2000-an, tempat ini bukan lagi sekadar kedai kopi, melainkan ruang kumpul yang hidup dengan fasilitas photobooth, barbershop, hingga event mingguan.
             </p>
 
             <div className="pt-2">
               <div className="border-l-4 border-caramel pl-4 italic text-mocha font-playfair text-base">
-                "For those visiting West Sumatra or locals seeking a delightful coffee break, Muladari Kopi stands out as a must-visit. Its combination of carefully crafted coffee, a welcoming atmosphere, and affordability invites repeat visits."
+                "Dari kerasnya jalanan menjadi sebuah distrik yang hangat, satu hal yang tak pernah berubah: semuanya memang mula dari kopi."
               </div>
             </div>
           </motion.div>
