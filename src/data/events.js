@@ -1,5 +1,16 @@
 export const pastEvents = [
   {
+    id: 13,
+    performer: 'TOWNHAZE - Hip Hop Lineup',
+    type: 'Hip Hop Live Performance',
+    badge: 'Upcoming Gig',
+    date: 'Jumat, 19 Juni 2026',
+    time: '19.00 - 23.00 WIB',
+    description: 'Pertunjukan spesial Hip Hop "TOWNHAZE" menghadirkan kolaborasi panggung membara dari RES Q, FLICK, dan DJ Xarza. Menampilkan lagu-lagu hits seperti Arena, Tapakan, Beda Jalan, dan Senang Diantara Sekat.',
+    image: '/images/Events/WhatsApp Image 2026-06-07 at 22.56.30.jpeg',
+    isUpcoming: true
+  },
+  {
     id: 1,
     performer: 'The Lazy Three',
     type: 'Reggae Party',

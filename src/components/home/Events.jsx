@@ -176,7 +176,9 @@ const Events = () => {
 
                   {/* Already Happened Badge */}
                   <div className="pt-4 border-t border-espresso/10 flex items-center justify-between text-xs font-semibold text-espresso/40">
-                    <span className="uppercase tracking-widest">Sudah Berlangsung</span>
+                    <span className="uppercase tracking-widest">
+                      {selectedEvent.isUpcoming ? 'Akan Datang' : 'Sudah Berlangsung'}
+                    </span>
                     <span className="bg-espresso/5 px-2.5 py-1 rounded-md text-[10px]">District Muladari</span>
                   </div>
                 </div>
