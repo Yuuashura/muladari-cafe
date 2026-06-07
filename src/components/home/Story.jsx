@@ -56,16 +56,16 @@ const Story = () => {
             </p>
 
             <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
-              Berbekal hasil introspeksi, pada awal tahun 2025 kami kembali merajut asa dengan menyewa sebuah kedai kecil di Jalan Minang. Di titik inilah, nama Mula Dari Kopi resmi digunakan. Perlahan tapi pasti, racikan kopi kami mulai dipahami dan dicintai. Aroma kopi yang diseduh berhasil menarik penikmat setianya, dan rasa kebersamaan di kedai kecil itu tumbuh semakin pekat.
+              Berbekal hasil introspeksi, pada awal tahun 2025 kami kembali merajut asa dengan menyewa sebuah kedai kecil di Jalan Minang. Di titik inilah, nama Muladari Kopi resmi digunakan. Perlahan tapi pasti, racikan kopi kami mulai dipahami dan dicintai. Aroma kopi yang diseduh berhasil menarik penikmat setianya, dan rasa kebersamaan di kedai kecil itu tumbuh semakin pekat.
             </p>
 
             <p className="font-dmsans text-sm md:text-base text-espresso/80 leading-relaxed">
-              Antusiasme luar biasa dari para pelanggan membawa kami pada sebuah lompatan besar hanya dalam kurun waktu empat bulan. Kami berekspansi ke kawasan Parak Juar dan berevolusi menjadi Distrik Mula Dari Kopi. Mengusung vibes nostalgia era sebelum 2000-an, tempat ini bukan lagi sekadar kedai kopi, melainkan ruang kumpul yang hidup dengan fasilitas photobooth, barbershop, hingga event mingguan.
+              Antusiasme luar biasa dari para pelanggan membawa kami pada sebuah lompatan besar hanya dalam kurun waktu empat bulan. Kami berekspansi ke kawasan Parak Juar dan berevolusi menjadi Distrik Muladari Kopi. Mengusung vibes nostalgia era sebelum 2000-an, tempat ini bukan lagi sekadar kedai kopi, melainkan ruang kumpul yang hidup dengan fasilitas photobooth, barbershop, hingga event mingguan.
             </p>
 
             <div className="pt-2">
               <div className="border-l-4 border-caramel pl-4 italic text-mocha font-playfair text-base">
-                "Dari kerasnya jalanan menjadi sebuah distrik yang hangat, satu hal yang tak pernah berubah: semuanya memang mula dari kopi."
+                "Dari kerasnya jalanan menjadi sebuah distrik yang hangat, satu hal yang tak pernah berubah: semuanya memang MulaD  ari kopi."
               </div>
             </div>
           </motion.div>
