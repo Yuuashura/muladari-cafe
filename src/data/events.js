@@ -126,5 +126,5 @@ export const districtMuladari = {
   subtitle: 'The Next Level Hangout Hub in Town',
   description: 'Hadir dengan konsep unik yang menggabungkan premium coffee shop, creative space, dan slow-bar experience. Ruang kolaboratif yang nyaman dan hangat untuk menampung setiap cerita, diskusi, dan cita-cita Anda.',
   location: 'Jl. Hamka, Baringin, Kec. Lima Kaum, Kabupaten Tanah Datar',
-  image: '/images/about.jpg'
+  image: '/images/New folder/WhatsApp Image 2026-06-07 at 13.52.26.jpeg'
 };
