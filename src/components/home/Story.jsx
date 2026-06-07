@@ -80,7 +80,7 @@ const Story = () => {
             {/* Image stack effect */}
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-[8px_8px_0px_0px_rgba(19,62,43,0.18)] border-[12px] border-cream">
               <img 
-                src="/images/about.jpg" 
+                src="/images/New folder/WhatsApp Image 2026-06-07 at 13.52.26.jpeg" 
                 alt="Kedai Muladari Kopi" 
                 className="w-full h-[550px] object-cover hover:scale-105 transition-transform duration-700 vintage-photo"
               />
