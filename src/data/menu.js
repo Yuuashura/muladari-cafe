@@ -9,9 +9,9 @@ export const menuCategories = [
 export const menuItems = [
   {
     id: 1,
-    name: 'Muladari Original Coffee',
-    category: 'cold',
-    description: 'Ekstraksi kopi murni dengan aroma kuat dan krema tebal khas Muladari.',
-    image: 'https://static2.menufyy.com/muladari-kopi-albums-4.jpg'
+    name: 'List Menu Muladari',
+    category: 'all',
+    description: 'List Menu Muladari Kopi Sementara',
+    image: '/images/New folder/WhatsApp Image 2026-06-07 at 13.51.38.jpeg'
   }
 ];
