@@ -79,10 +79,7 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 text-gold mt-0.5 shrink-0" />
                 <span>District Muladari Social Bar, Baringin, Lima Kaum, Batusangkar</span>
               </li>
-              <li className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-gold shrink-0" />
-                <span>+62 812-3456-789</span>
-              </li>
+             
             </ul>
           </div>
         </div>
