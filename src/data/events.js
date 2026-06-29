@@ -1,5 +1,16 @@
 export const pastEvents = [
   {
+    id: 14,
+    performer: 'Brian Rahmattio',
+    type: 'Special Live Performance',
+    badge: 'Upcoming Live Music',
+    date: 'Sabtu, 11 Juli 2026',
+    time: '19.00 WIB - Selesai',
+    description: 'Saksikan penampilan spesial dari musisi multitalenta Brian Rahmattio secara langsung di District Muladari Kopi. Nikmati hangatnya malam minggu Anda ditemani alunan musik indah dan kopi pilihan terbaik.',
+    image: '/images/Events/Event 11 Juli 2026.jpeg',
+    isUpcoming: true
+  },
+  {
     id: 13,
     performer: 'TOWNHAZE - Hip Hop Lineup',
     type: 'Hip Hop Live Performance',
